@@ -1,0 +1,107 @@
+[
+  {
+    "order": 1,
+    "class": [
+      "hero-new-banner-main"
+    ],
+    "id": null,
+    "heading": "The System That Runs Systems."
+  },
+  {
+    "order": 2,
+    "class": [
+      "logo-ticker-section"
+    ],
+    "id": null,
+    "heading": "(logo / link section)"
+  },
+  {
+    "order": 3,
+    "class": [
+      "fy-section-main"
+    ],
+    "id": null,
+    "heading": "Your business has better things to do."
+  },
+  {
+    "order": 4,
+    "class": [
+      "solutions-tab-main"
+    ],
+    "id": null,
+    "heading": "Innovative solutions for retailers, MSMEs and manufacturers"
+  },
+  {
+    "order": 5,
+    "class": [
+      "vsolutions-section"
+    ],
+    "id": null,
+    "heading": "Solving Business Challenges Across Sectors"
+  },
+  {
+    "order": 6,
+    "class": [
+      "on-page-main"
+    ],
+    "id": null,
+    "heading": "Go beyond with smart - store features"
+  },
+  {
+    "order": 7,
+    "class": [
+      "vina-banner-section",
+      "vina-geist-font"
+    ],
+    "id": null,
+    "heading": "Meet vina. the Intelligence layer of vasy."
+  },
+  {
+    "order": 8,
+    "class": [],
+    "id": null,
+    "heading": "Our integration partners"
+  },
+  {
+    "order": 9,
+    "class": [
+      "award-main"
+    ],
+    "id": null,
+    "heading": "Award and honors"
+  },
+  {
+    "order": 10,
+    "class": [
+      "testimonial",
+      "position-relative"
+    ],
+    "id": "client-testimonial",
+    "heading": "Success stories"
+  },
+  {
+    "order": 11,
+    "class": [
+      "blog",
+      "section-bg"
+    ],
+    "id": "blog",
+    "heading": "Business success: Powerful ideas and industry insights at your fingertips"
+  },
+  {
+    "order": 12,
+    "class": [
+      "newCta"
+    ],
+    "id": "newCta",
+    "heading": "(logo / link section)"
+  },
+  {
+    "order": 13,
+    "class": [
+      "home-page-linking-wrapper"
+    ],
+    "id": null,
+    "heading": "(logo / link section)"
+  }
+]

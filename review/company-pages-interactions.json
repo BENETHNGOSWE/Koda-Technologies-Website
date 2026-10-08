@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "Homepage Products mega-menu contains six products and opens a local product page",
+    "Product capability controls and FAQ accordion work",
+    "Contact form validates email, preselects product and prepares an honest email draft",
+    "Mobile menu expands Products and opens Achete locally",
+    "Existing homepage hero-slider animation and pagination still work"
+  ],
+  "errors": [],
+  "timeline_rows": 7,
+  "timeline_mobile_swiper": true
+}

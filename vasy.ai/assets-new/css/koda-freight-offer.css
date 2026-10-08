@@ -1,0 +1,364 @@
+.koda-freight-offer {
+
+            position: relative;
+
+            padding: clamp(70px, 8vw, 110px) 0;
+
+            background: #fff;
+
+            overflow: hidden;
+        }
+
+        .koda-freight-offer__header {
+            max-width: 1200px;
+            margin: 0 auto clamp(20px, 3vw, 36px);
+            text-align: center;
+        }
+
+        .koda-freight-offer__eyebrow {
+
+            display: inline-block;
+
+            margin-bottom: 14px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 1.8px;
+
+            color: var(--primary-color);
+
+            text-transform: uppercase;
+        }
+
+        .koda-freight-offer__title {
+
+            margin: 0;
+
+            font-size: clamp(34px, 3.2vw, 52px);
+
+            font-weight: 700;
+
+            line-height: 1.15;
+
+            color: var(--secondary-color);
+        }
+
+        .koda-freight-offer__title span {
+
+            color: var(--primary-color);
+        }
+
+        .koda-freight-offer__description {
+
+            max-width: 800px;
+
+            margin: 18px auto 0;
+
+            font-size: clamp(15px, 1vw, 17px);
+
+            line-height: 1.7;
+
+            color: #060173;
+        }
+
+        @media (max-width:576px) {
+
+            .koda-freight-offer {
+
+                padding: 60px 0;
+            }
+
+            .koda-freight-offer__header {
+
+                margin-bottom: 40px;
+            }
+
+            .koda-freight-offer__title {
+
+                font-size: 32px;
+            }
+        }
+
+        .koda-freight-offer__grid {
+
+            display: grid;
+
+            grid-template-columns: 1.08fr 1fr 1fr;
+
+            gap: 18px;
+        }
+
+        .koda-freight-offer__card {
+
+            background: #fff;
+
+            border: 1px solid #ecebf4;
+
+            border-radius: 18px;
+
+            min-height: 136px;
+        }
+
+        .koda-freight-offer__card--featured {
+
+            grid-row: span 2;
+
+            min-height: 290px;
+        }
+
+        .koda-freight-offer__card--wide {
+
+            min-height: 110px;
+        }
+
+        .koda-freight-offer__row {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .koda-freight-offer__card {
+            background: #fff;
+            border: 1px solid #ecebf4;
+            border-radius: 18px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .koda-freight-offer__icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #f3f2f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .koda-freight-offer__icon img {
+            display: block;
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .koda-freight-offer__card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #060173;
+        }
+
+        .koda-freight-offer__card h3 a {
+            color: inherit;
+            text-decoration: none;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: rgba(6,1,115,0.3223);
+
+            transition:
+                color 0.3s ease,
+                text-decoration-color 0.3s ease;
+        }
+
+        .koda-freight-offer__card h3 a:hover {
+            color: var(--primary-color);
+            text-decoration-color: var(--primary-color);
+        }
+
+        .koda-freight-offer__card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #6B7785;
+        }
+
+        /* ── Featured card overrides ── */
+        .koda-freight-offer__card--featured {
+            background: linear-gradient(150deg, #060173 0%, #060173 100%);
+            border: none;
+        }
+
+        .koda-freight-offer__card--featured h3 {
+            color: #fff;
+        }
+
+        .koda-freight-offer__card--featured h3 a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.85;
+
+            transition:
+                color 0.3s ease,
+                opacity 0.3s ease;
+        }
+
+        .koda-freight-offer__card--featured h3 a:hover {
+            color: #fff;
+            opacity: 1;
+        }
+
+        .koda-freight-offer__card--featured p {
+            color: rgba(255, 255, 255, 0.80);
+        }
+
+        .koda-freight-offer__card--featured .koda-freight-offer__icon {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        /* ── Stat box inside featured card ── */
+        .koda-freight-offer__stat-box {
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .koda-freight-offer__stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .koda-freight-offer__stat-label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .koda-freight-offer__stat-value {
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .koda-freight-offer__stat-bar-track {
+            margin-top: 6px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.20);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+        .koda-freight-offer__stat-bar {
+            height: 100%;
+            background: #fff;
+            border-radius: 99px;
+        }
+
+        /* ── Most Popular badge ── */
+        .koda-freight-offer__badge {
+            display: inline-block;
+            width: fit-content;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.30);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 14px;
+            border-radius: 999px;
+        }
+
+        /* ── Hover effects ── */
+        .koda-freight-offer__card {
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+        }
+
+        .koda-freight-offer__card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(6,1,115,0.0631);
+            border-color: #060173;
+        }
+
+        /* Featured card hover — no border shift, just subtle brightness */
+        .koda-freight-offer__card--featured:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(6,1,115,0.1567);
+            border-color: transparent;
+        }
+
+        @media (min-width: 768px) {
+            .koda-freight-offer__grid {
+                display: grid !important;
+            }
+        }
+
+
+        /* ── Swiper wrapper ── */
+        .koda-freight-offer__swiper {
+            padding: 10px 4px 36px;
+            /* bottom space for pagination dots */
+            overflow: hidden;
+        }
+
+        /* Slides peek on sides to hint there's more */
+        .koda-freight-offer-swiper {
+            overflow: visible;
+        }
+
+        .koda-freight-offer .swiper-slide {
+            height: auto;
+            /* equal height slides */
+        }
+
+        .koda-freight-offer .swiper-slide .koda-freight-offer__card {
+            height: 100%;
+        }
+
+        /* ── Active slide = hover state ── */
+        .koda-freight-offer .swiper-slide-active .koda-freight-offer__card {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(6,1,115,0.0631);
+            border-color: #060173;
+        }
+
+        .koda-freight-offer .swiper-slide-active .koda-freight-offer__card--featured {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(6,1,115,0.1567);
+            border-color: transparent;
+        }
+
+        /* ── Pagination dots ── */
+        .koda-freight-offer-swiper__pagination {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 20px;
+        }
+
+        .koda-freight-offer-swiper__pagination .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background: #dad9ea;
+            opacity: 1;
+            border-radius: 99px;
+            transition: width 0.25s ease, background 0.25s ease;
+        }
+
+        .koda-freight-offer-swiper__pagination .swiper-pagination-bullet-active {
+            width: 22px;
+            background: #060173;
+        }
+
+        /* what we offere section ends */
+
+        /* feature section starts  */
+
+        
+/* Four approved content points, with the source's featured-card hierarchy. */
+#capabilities.koda-freight-offer{scroll-margin-top:90px;padding-top:45px}
+.koda-freight-offer__card h3{margin:0;line-height:1.35;font-size:18px;text-transform:none}
+.koda-freight-offer__card p{margin:0;font-size:15px;line-height:1.65}
+.koda-freight-offer__grid .freight-offer-wide{grid-column:2 / 4}
+.koda-freight-offer__card--featured{background:linear-gradient(145deg,#252093,#060173)}
+.koda-freight-offer__card--featured .koda-freight-offer__icon img{filter:brightness(0) invert(1)}
+.koda-freight-offer__card--featured .koda-freight-offer__stat-box{margin-top:auto}
+.freight-offer-focus{display:flex;flex-direction:column;gap:8px;color:white}
+.freight-offer-focus span{font-size:12px;opacity:.8}.freight-offer-focus strong{font-size:22px}
+.koda-freight-offer__card--featured .koda-freight-offer__badge{color:#fdb847;border-color:rgba(253,184,71,.45);background:rgba(253,184,71,.1)}
+.freight-offer-contact{color:#060173;background:#fdb847;padding:10px 18px;border-radius:9px;width:fit-content;font-weight:600;font-size:14px;text-decoration:none}
+.freight-offer-contact:hover{color:white;background:#060173}.freight-offer-contact:focus-visible{outline:3px solid #060173;outline-offset:4px}
+@media(min-width:768px){.koda-freight-offer__grid{grid-template-columns:1.08fr 1fr 1fr;grid-template-rows:minmax(180px,auto) minmax(160px,auto)}.koda-freight-offer__grid .koda-freight-offer__card--featured{grid-row:1 / 3}}
+@media(max-width:767px){.koda-freight-offer__card{min-height:325px}.koda-freight-offer__title{font-size:30px}.koda-freight-offer__card{padding:24px}}
+@media(prefers-reduced-motion:reduce){.koda-freight-offer *{transition:none!important}}

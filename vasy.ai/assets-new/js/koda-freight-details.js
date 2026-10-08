@@ -1,0 +1,6 @@
+(()=>{
+const items=[...document.querySelectorAll('.koda-freight-faq__item')];
+function sync(){items.forEach(item=>{const open=item.classList.contains('is-open'),answer=item.querySelector('.koda-freight-faq__answer');item.querySelector('button').setAttribute('aria-expanded',String(open));answer.inert=!open;answer.style.maxHeight=open?answer.scrollHeight+'px':'0px';});}
+items.forEach(item=>item.querySelector('button').addEventListener('click',()=>{const open=item.classList.contains('is-open');items.forEach(i=>i.classList.remove('is-open'));if(!open)item.classList.add('is-open');sync();}));sync();addEventListener('resize',sync);addEventListener('load',sync);document.fonts?.ready.then(sync);
+const section=document.querySelector('.koda-freight-why'),toggle=section.querySelector('.koda-freight-why__more-btn');toggle.setAttribute('aria-expanded','false');toggle.addEventListener('click',()=>{const expanded=section.classList.toggle('is-expanded');toggle.setAttribute('aria-expanded',String(expanded));toggle.textContent=expanded?'View Less':'View More';});
+})();

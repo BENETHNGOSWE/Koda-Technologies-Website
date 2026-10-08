@@ -1,0 +1,43 @@
+{
+  "unchanged": [
+    "hero",
+    "header",
+    "FAQ markup",
+    "contact CTA",
+    "footer"
+  ],
+  "checks": [
+    {
+      "width": 1440,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "cards": 4,
+      "mobile_carousel": null
+    },
+    {
+      "width": 768,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "cards": 4,
+      "mobile_carousel": null
+    },
+    {
+      "width": 390,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "cards": 4,
+      "mobile_carousel": true
+    },
+    {
+      "width": 320,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "cards": 4,
+      "mobile_carousel": true
+    }
+  ]
+}

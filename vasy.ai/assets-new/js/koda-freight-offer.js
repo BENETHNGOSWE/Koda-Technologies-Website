@@ -1,0 +1,2 @@
+/* Touch carousel from the selected What We Offer section. */
+(function(){let carousel;const el=document.querySelector('.koda-freight-offer-swiper');if(!el)return;function sync(){if(innerWidth<768&&!carousel){carousel=new Swiper(el,{slidesPerView:1.12,centeredSlides:true,spaceBetween:16,loop:false,grabCursor:true,pagination:{el:'.koda-freight-offer-swiper__pagination',clickable:true},a11y:{enabled:true},keyboard:{enabled:true,onlyInViewport:true}});}else if(innerWidth>=768&&carousel){carousel.destroy(true,true);carousel=null;}}sync();addEventListener('resize',sync);})();

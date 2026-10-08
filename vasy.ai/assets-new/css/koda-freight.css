@@ -1,0 +1,3635 @@
+
+        /* hero section starts  */
+
+        /* hero section background start */
+        .vretail-hero {
+            position: relative;
+            min-height: 100vh;
+            background: #ffffff;
+            overflow: hidden;
+            padding: 60px 0px;
+            z-index: 0;
+        }
+
+        @media (max-width: 991.98px) {
+            .vretail-hero {
+                min-height: unset;
+                /* or min-height: auto; */
+            }
+        }
+
+        .vretail-hero::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.55;
+            z-index: -1;
+        }
+
+        .vretail-hero::before {
+            background: radial-gradient(circle, #060173, transparent 70%);
+            top: -20px;
+            left: -200px;
+        }
+
+        .vretail-hero::after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.8;
+
+            background: radial-gradient(circle, #060173, transparent 70%);
+
+            top: 60px;
+            right: 60px;
+
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+
+            .vretail-hero::before {
+                width: 350px;
+                height: 350px;
+                filter: blur(90px);
+                opacity: 0.8;
+            }
+
+            .vretail-hero::after {
+                width: 150px;
+                height: 150px;
+                filter: blur(90px);
+                opacity: 1;
+            }
+
+            .vretail-hero::before {
+                top: -20px;
+                left: -20px;
+            }
+
+            .vretail-hero::after {
+                top: auto;
+                right: auto;
+                background: radial-gradient(circle, #060173, transparent 99%);
+                bottom: -30px;
+                left: 30%;
+            }
+
+        }
+
+        /* hero section background end */
+
+        /* hero section left part start  */
+
+        .vretail-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 4px 14px;
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+
+            color: var(--primary-color);
+            background: #f4f3f9;
+
+            border: 2px solid rgba(6,1,115,0.1156);
+        }
+
+        @media (max-width: 767.98px) {
+            .vretail-hero__badge {
+                margin-top: 10px;
+            }
+        }
+
+        /* Pulsating dot */
+        .vretail-hero__dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary-color);
+
+            position: relative;
+        }
+
+        /* pulse ring */
+        .vretail-hero__dot::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--primary-color);
+            transform: translate(-50%, -50%);
+            opacity: 0.6;
+
+            animation: pulse 1.6s ease-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.6;
+            }
+
+            70% {
+                transform: translate(-50%, -50%) scale(2.4);
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(2.4);
+            }
+        }
+
+        .vretail-hero__title {
+            font-size: clamp(28px, 3.2vw, 48px);
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--secondary-color);
+            margin-top: 18px;
+        }
+
+        .vretail-hero__title h1 {
+            display: inline;
+            font: inherit;
+            color: inherit;
+            margin: 0;
+        }
+
+        .vretail-hero__title-highlight {
+            display: block;
+            color: var(--primary-dark);
+        }
+
+        .vretail-hero__desc {
+            margin-top: 18px;
+
+            font-size: clamp(14px, 1.2vw, 16px);
+            line-height: 1.7;
+
+            color: var(--secondary-dark);
+        }
+
+        .vretail-hero__btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 20px;
+            padding: clamp(6px, 0.8vw, 8px) clamp(16px, 1.6vw, 22px);
+
+            font-size: clamp(13px, 1vw, 14px);
+            font-weight: 600;
+
+            color: var(--white);
+            background: linear-gradient(135deg,
+                    var(--primary-color),
+                    var(--primary-dark));
+
+            box-shadow: 0 10px 20px var(--shadow-blue);
+
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .vretail-hero__btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 26px var(--shadow-blue);
+            color: white;
+        }
+
+        /* hero section left part end  */
+
+        /* hero section right part start  */
+        .vretail-hero__dashboard {
+            position: relative;
+            width: 100%;
+            max-width: 560px;
+            margin-inline: auto;
+        }
+
+        .vretail-hero__dashboard-main {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid #f1f0f7;
+            border-radius: 24px;
+
+            min-height: unset;
+
+            box-shadow:
+                0 30px 60px rgba(6,1,115,0.056);
+
+            overflow: hidden;
+        }
+
+        @media (max-width: 991.98px) {
+            .vretail-hero__visual {
+                margin-top: 40px;
+            }
+
+            .vretail-hero__dashboard-main {
+                min-height: unset;
+            }
+        }
+
+        .vretail-hero__dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px;
+            border-bottom: 1px solid #f1f0f7;
+            margin-bottom: 10px;
+        }
+
+        .vretail-hero__dashboard-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .vretail-hero__dashboard-icon {
+            width: clamp(40px, 3vw, 48px);
+            height: clamp(40px, 3vw, 48px);
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+            background: #f9f9fc;
+        }
+
+        .vretail-hero__dashboard-icon img {
+            width: clamp(20px, 1.5vw, 24px);
+            height: clamp(20px, 1.5vw, 24px);
+            object-fit: contain;
+        }
+
+        .vretail-hero__dashboard-title h3 {
+            margin: 0;
+            font-size: clamp(14px, 1.2vw, 20px) !important;
+            font-weight: 700;
+            line-height: 1.2;
+
+            color: var(--secondary-color);
+        }
+
+        .vretail-hero__dashboard-title p {
+            margin: 4px 0 0;
+
+            font-size: clamp(12px, 0.9vw, 14px) !important;
+            font-weight: 500;
+            line-height: 1.5;
+
+            color: #060173;
+        }
+
+        .vretail-hero__dashboard-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+
+            padding: 6px 12px;
+
+            color: #25b83b;
+
+            font-size: clamp(11px, 0.8vw, 13px);
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .vretail-hero__status-dot {
+            position: relative;
+
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+            background: #25B83B;
+
+            flex-shrink: 0;
+        }
+
+        .vretail-hero__status-dot::after {
+            content: "";
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            width: 100%;
+            height: 100%;
+
+            border-radius: 50%;
+            border: 2px solid rgba(37, 184, 59, 0.45);
+
+            transform: translate(-50%, -50%) scale(1);
+
+            animation: vretail-status-pulse 1.8s ease-out infinite;
+        }
+
+        @keyframes vretail-status-pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.9;
+            }
+
+            75% {
+                transform: translate(-50%, -50%) scale(2.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(2.8);
+                opacity: 0;
+            }
+        }
+
+        .vretail-hero__dashboard-body {
+            flex: 1;
+            padding: 0 18px 18px;
+        }
+
+        .vretail-hero__stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        @media (max-width: 992px) {
+            .vretail-hero__stats {
+                display: flex;
+                overflow-x: auto;
+                overflow-y: hidden;
+                scrollbar-width: none;
+            }
+
+            .vretail-hero__stats::-webkit-scrollbar {
+                display: none;
+            }
+
+            .vretail-hero__stat-card {
+                flex: 0 0 160px;
+            }
+        }
+
+        .vretail-hero__stat-card {
+
+            padding: 14px;
+
+            border-radius: 18px;
+
+            background: #f9f8fb;
+
+            transition: .25s ease;
+        }
+
+        .vretail-hero__stat-card:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 16px 30px rgba(6,1,115,0.0375);
+        }
+
+        .vretail-hero__stat-label {
+
+            margin: 0;
+
+            font-size: 12px;
+            font-weight: 500;
+
+            color: #060173;
+        }
+
+        .vretail-hero__stat-value {
+
+            margin: 5px 0 3px;
+
+            font-size: clamp(18px, 1.5vw, 24px);
+            font-weight: 700;
+
+            color: #060173;
+        }
+
+        .vretail-hero__stat-change {
+
+            font-size: 12px;
+            font-weight: 600;
+
+            color: #25B83B;
+        }
+
+        .vretail-hero__stat-change.is-negative {
+            color: #E5484D;
+        }
+
+
+        .vretail-hero__throughput {
+
+            padding: 14px 16px;
+            margin-top: 14px;
+
+            background: #fcfbfd;
+
+            border: 1px solid #ecebf4;
+
+            border-radius: 20px;
+        }
+
+        .vretail-hero__throughput-header {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 10px;
+        }
+
+        .vretail-hero__throughput-title {
+
+            margin: 0;
+
+            font-size: clamp(14px, 1vw, 17px);
+            font-weight: 600;
+
+            color: #060173;
+        }
+
+        .vretail-hero__throughput-status {
+
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            font-size: 12px;
+            font-weight: 500;
+
+            color: #25B83B;
+        }
+
+        .vretail-hero__throughput-chart {
+
+            position: relative;
+
+            height: 90px;
+        }
+
+        .vretail-hero__stores {
+            display: flex;
+            flex-direction: column;
+
+            margin-top: 14px;
+            padding: 12px;
+
+            background: #fcfbfd;
+
+            border: 1px solid #ecebf4;
+            border-radius: 20px;
+        }
+
+        .vretail-hero__store {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+
+            padding: 8px 14px;
+
+            border-radius: 999px;
+
+            background: #f4f3f9;
+            border: 1px solid #e2e1ef;
+        }
+
+        .vretail-hero__store+.vretail-hero__store {
+            margin-top: 6px;
+        }
+
+        .vretail-hero__store-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .vretail-hero__store-name {
+            margin: 0;
+
+            font-size: clamp(13px, 0.95vw, 15px);
+            font-weight: 600;
+            line-height: 1.2;
+
+            color: #060173;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .vretail-hero__store-sales {
+            flex-shrink: 0;
+
+            font-size: clamp(13px, 1vw, 15px);
+            font-weight: 700;
+            line-height: 1;
+
+            color: var(--primary-color);
+
+            white-space: nowrap;
+        }
+
+        @media (max-width: 575.98px) {
+
+            .vretail-hero__throughput-chart {
+                height: 70px;
+            }
+
+        }
+
+        @media (max-width: 575.98px) {
+
+            .vretail-hero__stat-card {
+                padding: 12px;
+            }
+
+            .vretail-hero__stat-value {
+                font-size: 18px;
+            }
+
+        }
+
+        @media (max-width:575.98px) {
+
+            .vretail-hero__throughput {
+                margin-top: 10px;
+            }
+
+            .vretail-hero__stores {
+                margin-top: 10px;
+            }
+
+        }
+
+        @media (max-width:575.98px) {
+
+            .vretail-hero__throughput,
+            .vretail-hero__stores {
+                padding: 10px;
+            }
+
+        }
+
+        @media (max-width:575.98px) {
+
+            .vretail-hero__dashboard-header {
+                padding: 14px;
+            }
+
+        }
+
+        @media (max-width:575.98px) {
+
+            .vretail-hero__dashboard-body {
+                padding: 0 14px 14px;
+            }
+
+        }
+
+        .vretail-hero__float-card {
+            position: absolute;
+
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            padding: clamp(10px, 1vw, 14px) clamp(12px, 1.2vw, 16px);
+
+            background: #fff;
+
+            border: 1px solid #E5DDFB;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 18px 40px rgba(6,1,115,0.0843);
+
+            z-index: 5;
+            animation: vretailFloat 4s ease-in-out infinite;
+        }
+
+        .vretail-hero__float-card-checkout {
+
+            animation-delay: 0s;
+        }
+
+        .vretail-hero__float-card-accuracy {
+
+            animation-delay: 1.8s;
+        }
+
+        @keyframes vretailFloat {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+
+
+        .vretail-hero__float-icon {
+
+            width: clamp(28px, 2vw, 34px);
+            height: clamp(28px, 2vw, 34px);
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vretail-hero__float-icon img {
+
+            width: clamp(16px, 1.2vw, 20px);
+            height: clamp(16px, 1.2vw, 20px);
+
+            object-fit: contain;
+        }
+
+        .vretail-hero__float-content {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vretail-hero__float-label {
+
+            font-size: clamp(10px, .7vw, 11px);
+
+            letter-spacing: .6px;
+
+            font-weight: 600;
+            color: var(--secondary-dark);
+        }
+
+        .vretail-hero__float-value {
+
+            margin: 0;
+            font-weight: 700;
+            color: var(--secondary-color);
+
+            font-size: clamp(15px, 1.1vw, 18px);
+
+            line-height: 1.15;
+        }
+
+        .vretail-hero__float-card-checkout {
+            top: clamp(40px, 6vw, 60px);
+            right: clamp(-50px, -4vw, -90px);
+        }
+
+        .vretail-hero__float-card-accuracy {
+            left: clamp(-40px, -3vw, -72px);
+            bottom: clamp(-8px, 1vw, 12px);
+        }
+
+        .vretail-hero__float-top {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        @media (max-width:767.98px) {
+
+            .vretail-hero__float-card-checkout {
+
+                right: 8px;
+                top: -18px;
+            }
+
+            .vretail-hero__float-card-accuracy {
+
+                left: 8px;
+                bottom: -18px;
+            }
+
+        }
+
+        .vretail-hero__float-value span {
+            display: block;
+
+            margin-top: 2px;
+
+            font-size: 0.72em;
+            font-weight: 500;
+
+            color: var(--secondary-dark);
+        }
+
+        /* hero section right part end  */
+
+        /* hero section ends  */
+
+
+
+        /* trust section starts  */
+
+        .vretail-trust {
+
+            position: relative;
+
+            padding: 42px 0 clamp(44px, 8vw, 100px);
+
+            background: #faf9fc;
+
+            border-top: 1px solid #f1f1f7;
+            border-bottom: 1px solid #f1f1f7;
+        }
+
+        .vretail-trust__header {
+
+            max-width: 1200px;
+
+            margin: 0 auto 56px;
+
+            text-align: center;
+        }
+
+        .vretail-trust__title {
+
+            margin: 0;
+
+            font-size: clamp(30px, 2.6vw, 44px);
+            font-weight: 700;
+            line-height: 1.15;
+
+            color: var(--secondary-color);
+        }
+
+        .vretail-trust__description {
+
+            max-width: 900px;
+
+            margin: 18px auto 0;
+
+            font-size: clamp(14px, 1vw, 16px);
+            font-weight: 400;
+            line-height: 1.7;
+
+            color: #060173;
+        }
+
+        @media (max-width: 767.98px) {
+
+            .vretail-trust {
+
+                padding: 56px 0;
+            }
+
+            .vretail-trust__header {
+
+                margin-bottom: 40px;
+            }
+
+            .vretail-trust__description {
+
+                line-height: 1.6;
+            }
+
+        }
+
+        .vretail-trust__brands {
+
+            position: relative;
+
+            width: 100%;
+        }
+
+        .vretail-trust__swiper {
+
+            width: 100%;
+        }
+
+        .vretail-trust__swiper .swiper-slide {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 80px;
+
+            transition: transform .35s ease;
+        }
+
+        .vretail-trust__swiper .swiper-slide:hover {
+
+            transform: translateY(-4px);
+        }
+
+        .vretail-trust__swiper img {
+
+            display: block;
+
+            width: auto;
+
+            max-width: 150px;
+
+            height: 68px;
+
+            object-fit: contain;
+
+            transition: filter .35s ease;
+        }
+
+        .vretail-trust__swiper .swiper-slide:hover img {
+
+            filter: brightness(1.08);
+        }
+
+        /* trust section ends  */
+
+
+        /* what we offere section starts */
+
+        .vretail-offer {
+
+            position: relative;
+
+            padding: clamp(70px, 8vw, 110px) 0;
+
+            background: #fff;
+
+            overflow: hidden;
+        }
+
+        .vretail-offer__header {
+            max-width: 1200px;
+            margin: 0 auto clamp(20px, 3vw, 36px);
+            text-align: center;
+        }
+
+        .vretail-offer__eyebrow {
+
+            display: inline-block;
+
+            margin-bottom: 14px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 1.8px;
+
+            color: var(--primary-color);
+
+            text-transform: uppercase;
+        }
+
+        .vretail-offer__title {
+
+            margin: 0;
+
+            font-size: clamp(34px, 3.2vw, 52px);
+
+            font-weight: 700;
+
+            line-height: 1.15;
+
+            color: var(--secondary-color);
+        }
+
+        .vretail-offer__title span {
+
+            color: var(--primary-color);
+        }
+
+        .vretail-offer__description {
+
+            max-width: 800px;
+
+            margin: 18px auto 0;
+
+            font-size: clamp(15px, 1vw, 17px);
+
+            line-height: 1.7;
+
+            color: #060173;
+        }
+
+        @media (max-width:576px) {
+
+            .vretail-offer {
+
+                padding: 60px 0;
+            }
+
+            .vretail-offer__header {
+
+                margin-bottom: 40px;
+            }
+
+            .vretail-offer__title {
+
+                font-size: 32px;
+            }
+        }
+
+        .vretail-offer__grid {
+
+            display: grid;
+
+            grid-template-columns: 1.08fr 1fr 1fr;
+
+            gap: 18px;
+        }
+
+        .vretail-offer__card {
+
+            background: #fff;
+
+            border: 1px solid #ecebf4;
+
+            border-radius: 18px;
+
+            min-height: 136px;
+        }
+
+        .vretail-offer__card--featured {
+
+            grid-row: span 2;
+
+            min-height: 290px;
+        }
+
+        .vretail-offer__card--wide {
+
+            min-height: 110px;
+        }
+
+        .vretail-offer__row {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .vretail-offer__card {
+            background: #fff;
+            border: 1px solid #ecebf4;
+            border-radius: 18px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .vretail-offer__icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #f3f2f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vretail-offer__icon img {
+            display: block;
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .vretail-offer__card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #060173;
+        }
+
+        .vretail-offer__card h3 a {
+            color: inherit;
+            text-decoration: none;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: rgba(6,1,115,0.3223);
+
+            transition:
+                color 0.3s ease,
+                text-decoration-color 0.3s ease;
+        }
+
+        .vretail-offer__card h3 a:hover {
+            color: var(--primary-color);
+            text-decoration-color: var(--primary-color);
+        }
+
+        .vretail-offer__card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #6B7785;
+        }
+
+        /* ── Featured card overrides ── */
+        .vretail-offer__card--featured {
+            background: linear-gradient(150deg, #060173 0%, #060173 100%);
+            border: none;
+        }
+
+        .vretail-offer__card--featured h3 {
+            color: #fff;
+        }
+
+        .vretail-offer__card--featured h3 a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.85;
+
+            transition:
+                color 0.3s ease,
+                opacity 0.3s ease;
+        }
+
+        .vretail-offer__card--featured h3 a:hover {
+            color: #fff;
+            opacity: 1;
+        }
+
+        .vretail-offer__card--featured p {
+            color: rgba(255, 255, 255, 0.80);
+        }
+
+        .vretail-offer__card--featured .vretail-offer__icon {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        /* ── Stat box inside featured card ── */
+        .vretail-offer__stat-box {
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .vretail-offer__stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .vretail-offer__stat-label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .vretail-offer__stat-value {
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .vretail-offer__stat-bar-track {
+            margin-top: 6px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.20);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+        .vretail-offer__stat-bar {
+            height: 100%;
+            background: #fff;
+            border-radius: 99px;
+        }
+
+        /* ── Most Popular badge ── */
+        .vretail-offer__badge {
+            display: inline-block;
+            width: fit-content;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.30);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 14px;
+            border-radius: 999px;
+        }
+
+        /* ── Hover effects ── */
+        .vretail-offer__card {
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+        }
+
+        .vretail-offer__card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(6,1,115,0.0631);
+            border-color: #060173;
+        }
+
+        /* Featured card hover — no border shift, just subtle brightness */
+        .vretail-offer__card--featured:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(6,1,115,0.1567);
+            border-color: transparent;
+        }
+
+        @media (min-width: 768px) {
+            .vretail-offer__grid {
+                display: grid !important;
+            }
+        }
+
+
+        /* ── Swiper wrapper ── */
+        .vretail-offer__swiper {
+            padding: 10px 4px 36px;
+            /* bottom space for pagination dots */
+            overflow: hidden;
+        }
+
+        /* Slides peek on sides to hint there's more */
+        .vretail-offer-swiper {
+            overflow: visible;
+        }
+
+        .swiper-slide {
+            height: auto;
+            /* equal height slides */
+        }
+
+        .swiper-slide .vretail-offer__card {
+            height: 100%;
+        }
+
+        /* ── Active slide = hover state ── */
+        .swiper-slide-active .vretail-offer__card {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(6,1,115,0.0631);
+            border-color: #060173;
+        }
+
+        .swiper-slide-active .vretail-offer__card--featured {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(6,1,115,0.1567);
+            border-color: transparent;
+        }
+
+        /* ── Pagination dots ── */
+        .vretail-offer-swiper__pagination {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 20px;
+        }
+
+        .vretail-offer-swiper__pagination .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background: #dad9ea;
+            opacity: 1;
+            border-radius: 99px;
+            transition: width 0.25s ease, background 0.25s ease;
+        }
+
+        .vretail-offer-swiper__pagination .swiper-pagination-bullet-active {
+            width: 22px;
+            background: #060173;
+        }
+
+        /* what we offere section ends */
+
+        /* feature section starts  */
+
+        .vretail-features {
+
+            position: relative;
+
+            padding: clamp(20px, 4vw, 30px) 0;
+
+            background: #fff;
+
+            overflow: hidden;
+        }
+
+        @media (max-width:576px) {
+
+            .vretail-features {
+
+                padding: 60px 0;
+            }
+        }
+
+        .vretail-features__header {
+            max-width: 1100px;
+            margin: 0 auto clamp(20px, 3vw, 36px);
+            text-align: center;
+        }
+
+        .vretail-features__eyebrow {
+
+            display: inline-block;
+
+            margin-bottom: 14px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 1.8px;
+
+            color: var(--primary-color);
+
+            text-transform: uppercase;
+        }
+
+        .vretail-features__title {
+
+            margin: 0;
+
+            font-size: clamp(34px, 3.2vw, 52px);
+
+            font-weight: 700;
+
+            line-height: 1.15;
+
+            color: var(--secondary-color);
+        }
+
+        .vretail-features__title span {
+
+            color: var(--primary-color);
+        }
+
+        .vretail-features__description {
+
+            max-width: 800px;
+
+            margin: 18px auto 0;
+
+            font-size: clamp(15px, 1vw, 17px);
+
+            line-height: 1.7;
+
+            color: #060173;
+        }
+
+        @media (max-width:576px) {
+
+            .vretail-features {
+
+                padding: 60px 0;
+            }
+
+            .vretail-features__header {
+
+                margin-bottom: 40px;
+            }
+
+            .vretail-offer__title {
+
+                font-size: 32px;
+            }
+        }
+
+        /* ── Desktop Grid ── */
+        .vretail-features__grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        @media (max-width:767.98px) {
+
+            .vretail-features__grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+        @media (max-width:575.98px) {
+
+            .vretail-features__grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        /* ── Card base ── */
+        .vretail-features__card {
+            background: linear-gradient(225deg,
+                    #f2f1f8 0%,
+                    #fafafc 45%,
+                    #ffffff 100%);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid #dad9ea;
+            /* equal height handled by grid */
+        }
+
+        /* ── Card top row: icon + number ── */
+        .vretail-features__card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .vretail-features__card-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(to bottom,
+                    #060173 0%,
+                    #060173 55%,
+                    #060173 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .vretail-features__card-icon img {
+            display: block;
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .vretail-features__card-number {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--secondary-color);
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Card text ── */
+        .vretail-features__card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .vretail-features__card-desc {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: var(--secondary-color);
+            margin: 0;
+        }
+
+        /* ── Visual placeholder area ── */
+        .vretail-features__card-visual {
+            margin-top: auto;
+            min-height: 60px;
+            /* decorative visuals go here per card */
+        }
+
+        .vretail-features__actions {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .vretail-features__toggle {
+
+            padding: 0;
+
+            border: 0;
+
+            background: none;
+
+            color: var(--primary-color);
+
+            font-size: 16px;
+            font-weight: 600;
+
+            text-decoration: underline;
+
+            cursor: pointer;
+
+            transition: .25s ease;
+        }
+
+        .vretail-features__toggle:hover {
+
+            opacity: .75;
+        }
+
+        .vretail-features__card.is-hidden {
+            display: none;
+        }
+
+        /* card 1 */
+        .vretail-multistore-pills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(4px, 1.2%, 8px);
+            width: 100%;
+        }
+
+        .vretail-pill {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(3px, 0.8%, 6px);
+            background: #060173;
+            color: #fff;
+            font-size: clamp(10px, 1.5vw, 13px);
+            font-weight: 500;
+            padding: clamp(5px, 1%, 8px) clamp(6px, 1.5%, 12px);
+            border-radius: 999px;
+            width: 100%;
+            box-sizing: border-box;
+            white-space: nowrap;
+            overflow: hidden;
+            gap: clamp(4px, 1vw, 10px);
+        }
+
+        .vretail-pill__dot {
+            width: clamp(6px, 0.8vw, 8px);
+            height: clamp(6px, 0.8vw, 8px);
+            border-radius: 50%;
+            background: #4ade80;
+            flex-shrink: 0;
+        }
+
+        /* card 2 */
+        .vretail-features__card-visual .vretail-card-graph {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: bottom center;
+            display: block;
+        }
+
+        /* card 3 */
+        .vretail-po-list {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(5px, 1vw, 8px);
+            width: 100%;
+        }
+
+        .vretail-po-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #060173;
+            border-radius: 999px;
+            padding: clamp(5px, 0.9vw, 8px) clamp(10px, 1.5vw, 14px);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .vretail-po-id {
+            color: #fff;
+            font-size: clamp(10px, 1.2vw, 12px);
+            font-weight: 500;
+        }
+
+        .vretail-po-status {
+            font-size: clamp(9px, 1.1vw, 11px);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .vretail-po-status::before {
+            content: "—";
+            color: var(--secondary-color);
+        }
+
+        .vretail-po-status--sent {
+            color: var(--secondary-color);
+        }
+
+        .vretail-po-status--received {
+            color: var(--secondary-color);
+        }
+
+        .vretail-po-status--paid {
+            color: #fff;
+        }
+
+        /* card 5 */
+
+        .vretail-discount-tags {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: clamp(4px, 0.6vw, 8px);
+            align-items: center;
+            width: 100%;
+        }
+
+        .vretail-tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 0;
+            min-width: 0;
+
+            border-radius: 999px;
+            font-weight: 500;
+
+            /* Scales down more on smaller screens */
+            font-size: clamp(7px, 0.75vw, 12px);
+            line-height: 1;
+
+            /* Slightly increased top/bottom padding */
+            padding: clamp(7px, 0.9vw, 10px) clamp(4px, 0.8vw, 10px);
+
+            white-space: nowrap;
+        }
+
+        .vretail-tag--blue-light {
+            background: #eaeaf3;
+            color: #060173;
+        }
+
+        .vretail-tag--blue-dark {
+            background: #060173;
+            color: #fff;
+        }
+
+        .vretail-tag--yellow {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .vretail-tag--green {
+            background: #d1fae5;
+            color: #059669;
+        }
+
+        @media (max-width: 992px) and (min-width: 576px) {
+            .vretail-tag--compact {
+                font-size: 5.5px;
+            }
+        }
+
+        /* card 6  */
+        .vretail-mobile-widget {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 2vw, 16px);
+        }
+
+        .vretail-mobile-frame {
+            flex-shrink: 0;
+            width: clamp(44px, 8vw, 62px);
+            height: clamp(64px, 11vw, 88px);
+            border: 2px solid #060173;
+            border-radius: clamp(6px, 1vw, 10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vretail-mobile-frame svg {
+            width: clamp(16px, 3vw, 24px);
+            height: clamp(16px, 3vw, 24px);
+        }
+
+        .vretail-mobile-synced {
+            display: flex;
+            align-items: center;
+            gap: clamp(4px, 0.8vw, 7px);
+            font-size: clamp(11px, 1.4vw, 13px);
+            font-weight: 600;
+            color: #22c55e;
+        }
+
+        .vretail-mobile-dot {
+            width: clamp(7px, 1vw, 9px);
+            height: clamp(7px, 1vw, 9px);
+            border-radius: 50%;
+            background: #22c55e;
+            flex-shrink: 0;
+        }
+
+        .vretail-mobile-platforms {
+            font-size: clamp(10px, 1.3vw, 12px);
+            color: #6b7280;
+            font-weight: 400;
+        }
+
+        /* card 7 */
+        .vretail-receipt {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vretail-receipt__row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: clamp(7px, 1.2vw, 9px) 0;
+            border-bottom: 1.5px dashed #d1d5db;
+        }
+
+        .vretail-receipt__row:last-child {
+            border-bottom: none;
+            padding-top: clamp(8px, 1.4vw, 9px);
+        }
+
+        .vretail-receipt__left {
+            display: flex;
+            align-items: center;
+            gap: clamp(8px, 1.5vw, 14px);
+            font-size: clamp(11px, 1.4vw, 13px);
+            color: #060173;
+        }
+
+        .vretail-receipt__qty {
+            color: #9ca3af;
+            font-size: clamp(10px, 1.3vw, 12px);
+            min-width: 18px;
+        }
+
+        .vretail-receipt__price {
+            font-size: clamp(11px, 1.4vw, 13px);
+            color: #060173;
+        }
+
+        .vretail-receipt__row--total .vretail-receipt__left,
+        .vretail-receipt__row--total .vretail-receipt__price {
+            font-weight: 700;
+            font-size: clamp(12px, 1.5vw, 14px);
+            color: #060173;
+        }
+
+        /* card 8 */
+        .vretail-scale-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #eaeaf3;
+            border-radius: clamp(10px, 2vw, 14px);
+            padding: clamp(12px, 2.5vw, 20px) clamp(14px, 3vw, 24px);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .vretail-scale-icon {
+            flex-shrink: 0;
+            width: clamp(28px, 5vw, 40px);
+            height: clamp(28px, 5vw, 40px);
+            color: #060173;
+        }
+
+        .vretail-scale-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .vretail-scale-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2px;
+        }
+
+        .vretail-scale-value {
+            font-size: clamp(22px, 4vw, 32px);
+            font-weight: 700;
+            color: #060173;
+            line-height: 1;
+        }
+
+        .vretail-scale-meta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: clamp(10px, 1.3vw, 12px);
+            color: #060173;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        .vretail-scale-live-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #22c55e;
+            flex-shrink: 0;
+        }
+
+        /* card 9   */
+        .vretail-pay-tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #060173;
+            color: #fff;
+            border-radius: 999px;
+            font-size: clamp(10px, 1.3vw, 13px);
+            font-weight: 500;
+            padding: clamp(6px, 1vw, 9px) 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* card 11 */
+        .vretail-loyalty-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #eaeaf3;
+            border-radius: clamp(10px, 2vw, 14px);
+            padding: clamp(12px, 2.5vw, 18px) clamp(14px, 3vw, 22px);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .vretail-loyalty-left {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(3px, 0.6vw, 5px);
+        }
+
+        .vretail-loyalty-tier {
+            font-size: clamp(6px, 1.2vw, 9px);
+            font-weight: 600;
+            color: #060173;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .vretail-loyalty-pts {
+            font-size: clamp(14px, 3vw, 20px);
+            font-weight: 700;
+            color: #060173;
+            line-height: 1;
+        }
+
+        .vretail-loyalty-icon {
+            flex-shrink: 0;
+            width: clamp(22px, 4vw, 32px);
+            height: clamp(22px, 4vw, 32px);
+        }
+
+        .vretail-loyalty-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* card 12 */
+        .vretail-promo-tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            font-size: clamp(10px, 1.3vw, 13px);
+            font-weight: 600;
+            padding: clamp(6px, 1vw, 9px) 4px;
+            width: 100%;
+            box-sizing: border-box;
+            white-space: nowrap;
+        }
+
+        .vretail-promo-tag--light-blue {
+            background: #eaeaf3;
+            color: #060173;
+        }
+
+        .vretail-promo-tag--dark-blue {
+            background: #060173;
+            color: #fff;
+        }
+
+        .vretail-promo-tag--yellow {
+            background: #fef9c3;
+            color: #b45309;
+        }
+
+        /* feature section ends  */
+
+        /* industries section starts  */
+
+        .vretail-industries {
+
+            padding: clamp(70px, 8vw, 110px) 0;
+
+            background: linear-gradient(90deg,
+                    #ffffff 0%,
+                    #faf9fc 25%,
+                    #f3f2f8 50%,
+                    #faf9fc 75%,
+                    #ffffff 100%);
+
+            overflow: hidden;
+        }
+
+
+        .vretail-industries__header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 40px;
+
+            margin-bottom: clamp(35px, 4vw, 55px);
+        }
+
+
+        .vretail-industries__heading {
+
+            flex: 1;
+        }
+
+
+        .vretail-industries__eyebrow {
+
+            display: inline-block;
+
+            margin-bottom: 14px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.8px;
+
+            color: var(--primary-color);
+
+            text-transform: uppercase;
+        }
+
+
+        .vretail-industries__title {
+
+            margin: 0;
+
+            font-size: clamp(34px, 3.2vw, 52px);
+
+            font-weight: 700;
+
+            line-height: 1.15;
+
+            color: var(--secondary-color);
+        }
+
+
+        .vretail-industries__title span {
+
+            color: var(--primary-color);
+        }
+
+
+        .vretail-industries__content {
+
+            flex: 0 0 600px;
+
+            padding-top: 12px;
+        }
+
+
+        .vretail-industries__content p {
+
+            margin: 0;
+
+            font-size: clamp(15px, 1vw, 17px);
+
+            line-height: 1.7;
+
+            color: #060173;
+        }
+
+        @media(max-width:768px) {
+
+            .vretail-industries__header {
+
+                flex-direction: column;
+
+                gap: 20px;
+            }
+
+
+            .vretail-industries__content {
+
+                flex: unset;
+
+                padding-top: 0;
+            }
+
+        }
+
+        .vretail-industries__cards {
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .vretail-industries__cards .swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 28px;
+            }
+
+            .vretail-industries__cards .swiper-slide {
+                width: auto !important;
+            }
+        }
+
+        .vretail-industries__card {
+            min-height: 230px;
+            padding: 28px;
+
+            background: rgba(255, 255, 255, 0.58);
+            border: 1px solid #e7e7f2;
+            border-radius: 16px;
+
+            transition: all 0.3s ease;
+        }
+
+        .vretail-industries__card:hover,
+        .vretail-industries__cards .swiper-slide-active {
+            border-color: var(--primary-color);
+            box-shadow: 0 16px 36px rgba(6,1,115,0.0837);
+            transform: translateY(-4px);
+        }
+
+        .vretail-industries__card-icon {
+            width: 44px;
+            height: 44px;
+            margin-bottom: 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+            background: #f5f4f9;
+        }
+
+        .vretail-industries__card-icon img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+
+        .vretail-industries__card h3 {
+            margin: 0 0 12px;
+
+            font-size: clamp(15px, 1vw, 18px);
+            font-weight: 700;
+            line-height: 1.3;
+
+            color: var(--secondary-color);
+            text-transform: uppercase;
+        }
+
+        .vretail-industries__card h3 a {
+            color: inherit;
+            text-decoration: none;
+
+            transition: color 0.3s ease;
+        }
+
+        .vretail-industries__card h3 a:hover {
+            color: var(--primary-color);
+        }
+
+        .vretail-industries__card p {
+            margin: 0;
+
+            font-size: clamp(13px, 0.95vw, 15px);
+            line-height: 1.65;
+
+            color: #060173;
+        }
+
+        @media (max-width: 767.98px) {
+            .vretail-industries__cards {
+                overflow: visible;
+                padding: 8px 2px 20px;
+            }
+
+            .vretail-industries__card {
+                min-height: 220px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .vretail-industries__card {
+                min-height: 210px;
+                padding: 24px;
+            }
+        }
+
+        .vretail-industries__cards {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .vretail-industries__pagination {
+            position: relative;
+            margin-top: 24px;
+        }
+
+        .vretail-industries__pagination .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            margin: 0 4px !important;
+            background: #d6d5e8;
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        .vretail-industries__pagination .swiper-pagination-bullet-active {
+            width: 24px;
+            border-radius: 999px;
+            background: var(--primary-color);
+        }
+
+        /* industries section ends  */
+
+        /* integration section starts */
+        .vretail-integration {
+            padding: clamp(40px, 6vw, 80px) 0;
+            background: #ffffff;
+        }
+
+        .vretail-integration__header {
+            max-width: 1100px;
+            margin: 0 auto 0;
+            text-align: center;
+        }
+
+        .vretail-integration__eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+
+            color: var(--primary-color);
+        }
+
+        .vretail-integration__title {
+            margin: 0;
+
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            line-height: 1.12;
+
+            color: var(--secondary-color);
+        }
+
+        .vretail-integration__description {
+            max-width: 920px;
+            margin: 14px auto 0;
+
+            font-size: clamp(13px, 1vw, 15px);
+            font-weight: 400;
+            line-height: 1.6;
+
+            color: #7b8794;
+        }
+
+        .vretail-integration__hub-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: clamp(24px, 3vw, 36px);
+            margin-bottom: clamp(34px, 4vw, 52px);
+        }
+
+        .vretail-integration__hub {
+            position: relative;
+
+            width: clamp(90px, 9vw, 118px);
+            height: clamp(90px, 9vw, 118px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vretail-integration__logo-box {
+            position: relative;
+            z-index: 3;
+
+            width: clamp(72px, 7vw, 95px);
+            height: clamp(72px, 7vw, 95px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(6,1,115,0.0837);
+            border-radius: 22px;
+
+            box-shadow: 0 18px 35px rgba(6,1,115,0.111);
+            animation: vretailIntegrationLogoFloat 3.5s ease-in-out infinite;
+        }
+
+        .vretail-integration__logo {
+            width: 75%;
+            max-width: 70px;
+            height: auto;
+        }
+
+        .vretail-integration__ring {
+            position: absolute;
+            inset: 50% auto auto 50%;
+
+            border-radius: 50%;
+            border: 2px solid rgba(6,1,115,0.1737);
+
+            transform: translate(-50%, -50%) scale(0.85);
+
+            pointer-events: none;
+            opacity: 0;
+        }
+
+
+        .vretail-integration__ring--one {
+            width: clamp(110px, 11vw, 150px);
+            height: clamp(110px, 11vw, 150px);
+
+            animation: vretailIntegrationRipple 3.5s ease-out infinite;
+        }
+
+
+        .vretail-integration__ring--two {
+            width: clamp(155px, 15vw, 210px);
+            height: clamp(155px, 15vw, 210px);
+
+            border-color: rgba(6,1,115,0.111);
+
+            animation: vretailIntegrationRipple 3.5s ease-out infinite;
+            animation-delay: 0.25s;
+        }
+
+
+        /* Logo movement */
+
+        @keyframes vretailIntegrationLogoFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            45% {
+                transform: translateY(-10px);
+            }
+
+            65% {
+                transform: translateY(0);
+            }
+        }
+
+
+        /* Water ripple */
+
+        @keyframes vretailIntegrationRipple {
+
+            0%,
+            55% {
+                transform: translate(-50%, -50%) scale(0.85);
+                opacity: 0;
+            }
+
+            65% {
+                opacity: 0.65;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .vretail-integration__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .vretail-integration__card {
+            min-height: 170px;
+            padding: 24px;
+            border-radius: 18px;
+            border: 1px solid transparent;
+            transition: all 0.35s ease;
+        }
+
+        .vretail-integration__card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .vretail-integration__card h3 {
+            margin: 0 0 22px;
+
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #060173;
+        }
+
+        .vretail-integration__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .vretail-integration__item {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 10px 16px;
+            border-radius: 999px;
+
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(6,1,115,0.057);
+
+            transition: all 0.3s ease;
+        }
+
+        .vretail-integration__item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(6,1,115,0.095);
+        }
+
+        .vretail-integration__item img {
+            height: 22px;
+            max-width: 62px;
+            object-fit: contain;
+        }
+
+        .vretail-integration__item span {
+            font-size: 14px;
+            font-weight: 600;
+            color: #060173;
+            white-space: nowrap;
+        }
+
+        .vretail-integration__card--green {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+
+        .vretail-integration__card--blue {
+            background: #f5f4f9;
+            border-color: #d7d6e9;
+        }
+
+        .vretail-integration__card--orange {
+            background: #fff7ed;
+            border-color: #fed7aa;
+        }
+
+        .vretail-integration__card--purple {
+            background: #faf5ff;
+            border-color: #e9d5ff;
+        }
+
+        .vretail-integration__card--yellow {
+            background: #fefce8;
+            border-color: #fde68a;
+        }
+
+        .vretail-integration__card--cyan {
+            background: #fbfafc;
+            border-color: #e5e5f1;
+        }
+
+        .vretail-integration__bottom {
+            margin: clamp(28px, 4vw, 42px) 0 0;
+            text-align: center;
+
+            font-size: 15px;
+            color: #6b7280;
+        }
+
+        .vretail-integration__bottom a {
+            color: var(--primary-color);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 991.98px) {
+            .vretail-integration__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .vretail-integration__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vretail-integration__card {
+                min-height: 190px;
+                padding: 22px;
+            }
+
+            .vretail-integration__item {
+                padding: 9px 14px;
+            }
+
+            .vretail-integration__item span {
+                font-size: 13px;
+            }
+        }
+
+        .vretail-integration__swiper {
+            display: none;
+            width: 100%;
+        }
+
+        @media (max-width: 575.98px) {
+
+            .vretail-integration__grid {
+                display: none;
+            }
+
+            .vretail-integration__swiper {
+                display: block;
+                overflow: visible;
+                padding-bottom: 38px;
+            }
+
+            .vretail-integration__swiper .swiper-slide {
+                height: auto;
+            }
+
+            .vretail-integration__swiper .vretail-integration__card {
+                height: 100%;
+                min-height: 210px;
+            }
+
+            .vretail-integration__pagination {
+                bottom: 0 !important;
+            }
+
+            .vretail-integration__pagination .swiper-pagination-bullet {
+                width: 7px;
+                height: 7px;
+                background: rgba(6,1,115,0.1605);
+                opacity: 1;
+            }
+
+            .vretail-integration__pagination .swiper-pagination-bullet-active {
+                width: 20px;
+                border-radius: 999px;
+                background: var(--primary-color);
+            }
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 400px) {
+
+            .vretail-integration__card {
+                padding: 18px;
+            }
+
+            .vretail-integration__card h3 {
+                margin-bottom: 16px;
+                font-size: 12px;
+                letter-spacing: 1.5px;
+            }
+
+            .vretail-integration__items {
+                gap: 10px;
+            }
+
+            .vretail-integration__item {
+                gap: 7px;
+                padding: 8px 11px;
+            }
+
+            .vretail-integration__item img {
+                height: 18px;
+                max-width: 48px;
+            }
+
+            .vretail-integration__item span {
+                font-size: 11px;
+            }
+        }
+
+        /* intergration section ends  */
+
+        /* outcome section starts */
+        .vretail-outcomes {
+            padding: clamp(50px, 7vw, 60px) 0;
+            background: #ffffff;
+        }
+
+        .vretail-outcomes__header {
+            max-width: 920px;
+            margin: 0 auto clamp(36px, 5vw, 58px);
+        }
+
+        .vretail-outcomes__eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+
+            color: var(--primary-color);
+        }
+
+        .vretail-outcomes__title {
+            margin: 0;
+
+            font-size: clamp(32px, 4vw, 46px);
+            font-weight: 700;
+            line-height: 1.12;
+
+            color: var(--secondary-color);
+        }
+
+        .vretail-outcomes__grid {
+            max-width: 920px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            border: 1px solid rgba(6,1,115,0.1331);
+            border-radius: 16px;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 28% 22%, rgba(6,1,115,0.0375), transparent 30%),
+                radial-gradient(circle at 72% 74%, rgba(6,1,115,0.0328), transparent 32%),
+                linear-gradient(135deg, #ffffff 0%, #f4fff9 48%, #ffffff 100%);
+        }
+
+        .vretail-outcomes__cell {
+            min-height: 120px;
+
+            border-right: 1px solid rgba(6,1,115,0.1331);
+            border-bottom: 1px solid rgba(6,1,115,0.1331);
+        }
+
+        .vretail-outcomes__cell:nth-child(3n) {
+            border-right: 0;
+        }
+
+        .vretail-outcomes__cell:nth-child(n + 4) {
+            border-bottom: 0;
+        }
+
+        .vretail-outcomes__cell {
+            min-height: 150px;
+            padding: clamp(24px, 3vw, 36px);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            border-right: 1px solid rgba(6,1,115,0.1331);
+            border-bottom: 1px solid rgba(6,1,115,0.1331);
+        }
+
+        .vretail-outcomes__number {
+            display: flex;
+            align-items: baseline;
+
+            margin-bottom: 10px;
+
+            font-size: clamp(38px, 4vw, 52px);
+            font-weight: 800;
+            line-height: 1;
+
+            color: #2f3033;
+        }
+
+        .vretail-outcomes__number>span:last-child {
+            color: var(--primary-color);
+        }
+
+        .vretail-outcomes__text {
+            margin: 0;
+
+            font-size: clamp(13px, 1.2vw, 15px);
+            font-weight: 600;
+            line-height: 1.5;
+
+            color: #343434;
+        }
+
+        @media (max-width: 575.98px) {
+
+            .vretail-outcomes__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .vretail-outcomes__cell:nth-child(3n) {
+                border-right: 1px solid rgba(6,1,115,0.1331);
+            }
+
+            .vretail-outcomes__cell:nth-child(n + 4) {
+                border-bottom: 1px solid rgba(6,1,115,0.1331);
+            }
+
+            /* Remove right border from every second cell */
+            .vretail-outcomes__cell:nth-child(2n) {
+                border-right: 0;
+            }
+
+            /* Remove bottom border from last row */
+            .vretail-outcomes__cell:nth-last-child(-n + 2) {
+                border-bottom: 0;
+            }
+        }
+
+        /* why us section starts  */
+        .vretail-whyus {
+            padding: clamp(55px, 7vw, 60px) 0;
+            background:
+                radial-gradient(circle at 18% 58%, rgba(6,1,115,0.0468), transparent 30%),
+                radial-gradient(circle at 82% 72%, rgba(6,1,115,0.056), transparent 32%),
+                linear-gradient(180deg, #ffffff 0%, #fcfbfd 100%);
+        }
+
+        .vretail-whyus__header {
+            max-width: 1100px;
+            margin: 0 auto clamp(34px, 4vw, 52px);
+            text-align: center;
+        }
+
+        .vretail-whyus__eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+
+            color: var(--primary-color);
+        }
+
+        .vretail-whyus__title {
+            margin: 0;
+
+            font-size: clamp(30px, 4vw, 44px);
+            font-weight: 700;
+            line-height: 1.15;
+
+            color: var(--secondary-color);
+        }
+
+        .vretail-whyus__title span {
+            display: block;
+        }
+
+        .vretail-whyus__description {
+            max-width: 900px;
+            margin: 16px auto 0;
+
+            font-size: clamp(13px, 1vw, 15px);
+            font-weight: 400;
+            line-height: 1.6;
+
+            color: #7b8794;
+        }
+
+        .vretail-whyus__table-wrap {
+            max-width: 920px;
+            margin: 0 auto;
+
+            border-radius: 18px;
+            overflow: hidden;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 24px 60px rgba(6,1,115,0.076),
+                0 0 80px rgba(6,1,115,0.0468);
+        }
+
+        .vretail-whyus__table-wrap {
+            max-width: 920px;
+            margin: 0 auto;
+
+            border-radius: 18px;
+            overflow: hidden;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 26px 60px rgba(6,1,115,0.095),
+                0 0 90px rgba(6,1,115,0.0653);
+        }
+
+        .vretail-whyus__table-scroll {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .vretail-whyus__table {
+            width: 100%;
+            min-width: 760px;
+
+            border-collapse: separate;
+            border-spacing: 0;
+
+            background: #ffffff;
+        }
+
+        .vretail-whyus__table th,
+        .vretail-whyus__table td {
+            min-width: 230px;
+            padding: 20px 22px;
+
+            border-bottom: 1px solid rgba(6,1,115,0.095);
+
+            font-size: 14px;
+            line-height: 1.45;
+            vertical-align: middle;
+        }
+
+        .vretail-whyus__table th:first-child,
+        .vretail-whyus__table td:first-child {
+            min-width: 210px;
+            width: 24%;
+
+            font-weight: 700;
+            color: #2f3033;
+
+            background: #ffffff;
+        }
+
+        .vretail-whyus__table th:nth-child(2),
+        .vretail-whyus__table td:nth-child(2) {
+            width: 38%;
+            background: rgba(220, 255, 224, 0.75);
+        }
+
+        .vretail-whyus__table th:nth-child(3),
+        .vretail-whyus__table td:nth-child(3) {
+            width: 38%;
+            color: #8a8f98;
+            background: #ffffff;
+        }
+
+        .vretail-whyus__table th {
+            padding-top: 18px;
+            padding-bottom: 18px;
+
+            text-align: left;
+
+            font-size: 18px;
+            font-weight: 800;
+
+            color: #2f3033;
+        }
+
+        .vretail-whyus__table th:nth-child(2) {
+            color: #ffffff;
+            background: linear-gradient(135deg, #060173 0%, #060173 100%);
+        }
+
+        .vretail-whyus__table tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .vretail-whyus__table td:nth-child(2),
+        .vretail-whyus__table td:nth-child(3) {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .vretail-whyus__icon {
+            width: 18px;
+            height: 18px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            margin-right: 10px;
+
+            border-radius: 50%;
+
+            vertical-align: middle;
+        }
+
+        .vretail-whyus__icon i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .vretail-whyus__icon--check {
+            color: #159c2f;
+            background: #6eef7e;
+        }
+
+        .vretail-whyus__icon--cross {
+            color: #e53935;
+            background: #ffb3b3;
+        }
+
+        @media (max-width: 575.98px) {
+
+            .vretail-whyus__table-wrap {
+                border-radius: 16px;
+            }
+
+            .vretail-whyus__table th,
+            .vretail-whyus__table td {
+                padding: 16px 18px;
+                font-size: 13px;
+            }
+
+            .vretail-whyus__table th {
+                font-size: 16px;
+            }
+        }
+
+        /* why us section ends  */
+
+        /* why vasy section starts */
+
+        .vretail-whyerp {
+            padding: clamp(50px, 7vw, 90px) 0;
+            background: #ffffff;
+        }
+
+        .vretail-whyerp__header {
+            max-width: 760px;
+            margin: 0 auto clamp(32px, 4vw, 44px);
+            text-align: center;
+        }
+
+        .vretail-whyerp__eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+
+            color: var(--primary-color);
+        }
+
+        .vretail-whyerp__title {
+            margin: 0;
+
+            font-size: clamp(32px, 4vw, 46px);
+            font-weight: 700;
+            line-height: 1.15;
+
+            color: var(--secondary-color);
+        }
+
+        .vretail-whyerp__grid {
+            max-width: 920px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .vretail-whyerp__card {
+            min-height: 180px;
+            padding: 26px;
+
+            border: 1px solid rgba(6,1,115,0.076);
+            border-radius: 14px;
+
+            background: #fbfafd;
+
+            transition: all 0.35s ease;
+        }
+
+        .vretail-whyerp__card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(6,1,115,0.076);
+        }
+
+        .vretail-whyerp__icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+            background: rgba(6,1,115,0.0468);
+            color: var(--primary-color);
+        }
+
+        .vretail-whyerp__icon i {
+            font-size: 19px;
+            line-height: 1;
+        }
+
+        .vretail-whyerp__card h3 {
+            margin: 0 0 10px;
+
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.35;
+
+            color: #2f3033;
+        }
+
+        .vretail-whyerp__card p {
+            margin: 0;
+
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.55;
+
+            color: #060173;
+        }
+
+        .vretail-whyerp__more-wrap {
+            display: none;
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .vretail-whyerp__more-btn {
+            padding: 0;
+
+            border: 0;
+
+            background: none;
+
+            color: var(--primary-color);
+
+            font-size: 16px;
+            font-weight: 600;
+
+            text-decoration: underline;
+
+            cursor: pointer;
+
+            transition: .25s ease;
+        }
+
+        @media (max-width: 991.98px) {
+
+            .vretail-whyerp__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .vretail-whyerp__card:nth-child(n + 5) {
+                display: none;
+            }
+
+            .vretail-whyerp.is-expanded .vretail-whyerp__card {
+                display: block;
+            }
+
+            .vretail-whyerp__more-wrap {
+                display: block;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+
+            .vretail-whyerp__grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .vretail-whyerp__card {
+                min-height: auto;
+                padding: 22px;
+            }
+
+            .vretail-whyerp__card:nth-child(n + 4) {
+                display: none;
+            }
+
+            .vretail-whyerp.is-expanded .vretail-whyerp__card {
+                display: block;
+            }
+        }
+
+        /* why vasy section ends */
+
+
+        /* testimonials section starts  */
+
+        .vretail-testimonials {
+            padding: clamp(55px, 7vw, 60px) 0;
+            background: #f8f8fb;
+        }
+
+        .vretail-testimonials__top {
+            margin: 0 auto clamp(50px, 6vw, 90px);
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .vretail-testimonials__eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+
+            color: var(--primary-color);
+        }
+
+        .vretail-testimonials__title {
+            margin: 0;
+
+            font-size: clamp(32px, 4vw, 46px);
+            font-weight: 700;
+            line-height: 1.12;
+
+            color: var(--secondary-color);
+        }
+
+        .vretail-testimonials__title span {
+            color: var(--primary-color);
+        }
+
+        .vretail-testimonials__description {
+            max-width: 800px;
+            margin: 18px 0 0;
+
+            font-size: clamp(13px, 1vw, 15px);
+            font-weight: 400;
+            line-height: 1.6;
+
+            color: #7b8794;
+        }
+
+        @media (max-width: 767.98px) {
+
+            .vretail-testimonials__top {
+                margin-bottom: 36px;
+                display: block;
+                text-align: center;
+            }
+
+            .vretail-testimonials__header {
+                max-width: 100%;
+            }
+
+            .vretail-testimonials__description {
+                margin-inline: auto;
+            }
+        }
+
+        .vretail-testimonials__slider-wrap {
+            position: relative;
+
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .vretail-testimonials__swiper {
+            overflow: hidden;
+            padding-bottom: 6px;
+            padding-top: 8px;
+        }
+
+        .vretail-testimonials__swiper .swiper-slide {
+            height: auto;
+        }
+
+        .vretail-testimonials__card {
+            height: 100%;
+
+            border-radius: 16px;
+            overflow: hidden;
+
+            background: #ffffff;
+            border: 1px solid rgba(6,1,115,0.076);
+
+            transition: all 0.35s ease;
+        }
+
+        .vretail-testimonials__card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(6,1,115,0.076);
+        }
+
+        .vretail-testimonials__video {
+            position: relative;
+
+            height: 180px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .vretail-testimonials__video-image {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+
+            transition: transform 0.5s ease;
+        }
+
+        .vretail-testimonials__play {
+            position: relative;
+            z-index: 2;
+
+            width: 48px;
+            height: 48px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 0;
+            border-radius: 50%;
+
+            color: #ffffff;
+            background: rgba(20, 20, 20, 0.85);
+
+            box-shadow: 0 10px 25px rgba(6,1,115,0.238);
+
+            cursor: pointer;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .vretail-testimonials__play:hover {
+            transform: scale(1.08);
+            background: var(--primary-color);
+        }
+
+        .vretail-testimonials__play i {
+            font-size: 24px;
+            line-height: 1;
+        }
+
+
+        .vretail-testimonials__content {
+            padding: 22px;
+        }
+
+        .vretail-testimonials__content h3 {
+            margin: 0 0 14px;
+
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.35;
+
+            color: #2f3033;
+        }
+
+        .vretail-testimonials__quote-icon {
+            height: 16px;
+            margin-bottom: 8px;
+
+            color: var(--primary-color);
+        }
+
+        .vretail-testimonials__quote-icon i {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .vretail-testimonials__content p {
+            min-height: 72px;
+            margin: 0 0 18px;
+
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.55;
+
+            color: #2f3033;
+        }
+
+        .vretail-testimonials__author {
+            padding-top: 18px;
+            border-top: 1px solid rgba(6,1,115,0.076);
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .vretail-testimonials__avatar {
+            width: 34px;
+            height: 34px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: linear-gradient(135deg,
+                    var(--primary-color),
+                    #060173);
+
+            color: #ffffff;
+
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1;
+
+            text-transform: uppercase;
+        }
+
+        .vretail-testimonials__author strong {
+            display: block;
+
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1.2;
+
+            color: #2f3033;
+        }
+
+        .vretail-testimonials__author div>span {
+            display: block;
+            margin-top: 3px;
+
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 1.2;
+
+            color: #7b8794;
+        }
+
+        .vretail-testimonials__nav {
+            position: absolute;
+            right: 0;
+            top: -74px;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .vretail-testimonials__btn {
+            width: 34px;
+            height: 34px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+            border: 1px solid rgba(6,1,115,0.1141);
+
+            background: #ffffff;
+            color: #060173;
+
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .vretail-testimonials__btn i {
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .vretail-testimonials__btn:hover {
+            background: #060173;
+            color: #ffffff;
+        }
+
+        @media (max-width: 767.98px) {
+
+            .vretail-testimonials__nav {
+                position: static;
+                justify-content: center;
+                margin-top: 24px;
+            }
+
+            .vretail-testimonials__video {
+                min-height: 170px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+
+            .vretail-testimonials__content {
+                padding: 20px;
+            }
+
+            .vretail-testimonials__content p {
+                min-height: auto;
+            }
+        }
+
+        /* testimonail section ends  */
+
+        /* faq section starts */
+
+        .vretail-faq {
+            padding: clamp(45px, 6vw, 80px) 0;
+            background: #fff;
+        }
+
+        .vretail-faq__grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: clamp(40px, 7vw, 110px);
+            align-items: flex-start;
+        }
+
+        .vretail-faq__header {
+            max-width: 380px;
+        }
+
+        .vretail-faq__eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: 0.04em;
+
+            color: #060173;
+            text-transform: uppercase;
+        }
+
+        .vretail-faq__title {
+            margin: 0 0 14px;
+
+            font-size: clamp(34px, 4vw, 48px);
+            font-weight: 800;
+            line-height: 1.1;
+
+            color: #333;
+        }
+
+        .vretail-faq__description {
+            margin: 0 0 24px;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.6;
+
+            color: #8a8f98;
+        }
+
+        .vretail-faq__btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-width: 170px;
+            min-height: 54px;
+            padding: 14px 28px;
+
+            border-radius: 5px;
+            background: #060173;
+
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1;
+
+            color: #fff;
+            text-decoration: none;
+
+            transition: all 0.25s ease;
+        }
+
+        .vretail-faq__btn:hover {
+            background: var(--primary-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 767.98px) {
+            .vretail-faq__grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .vretail-faq__header {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .vretail-faq__btn {
+                min-width: 150px;
+                min-height: 48px;
+                font-size: 16px;
+            }
+        }
+
+        .vretail-faq__accordion {
+            width: 100%;
+        }
+
+        .vretail-faq__item {
+            border-bottom: 1px solid #ecebf4;
+        }
+
+        .vretail-faq__question {
+            width: 100%;
+            padding: 20px 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+
+            text-align: left;
+        }
+
+        .vretail-faq__question span {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+
+            color: #333;
+        }
+
+        .vretail-faq__icon {
+            flex: 0 0 auto;
+
+            width: 18px;
+            height: 18px;
+            padding: 3px;
+
+            border: 1px solid var(--secondary-dark);
+            border-radius: 50%;
+
+            color: var(--secondary-dark);
+
+            transition:
+                transform 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .vretail-faq__item.is-open .vretail-faq__icon {
+            transform: rotate(45deg);
+
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .vretail-faq__item.is-open .vretail-faq__icon {
+            transform: rotate(45deg);
+        }
+
+        .vretail-faq__answer {
+            max-height: 0;
+            overflow: hidden;
+
+            transition: max-height 0.3s ease;
+        }
+
+        .vretail-faq__answer p {
+            max-width: 620px;
+            margin: 0;
+            padding: 0 0 22px;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.65;
+
+            color: #8a8f98;
+        }
+
+        .vretail-faq__item.is-open .vretail-faq__answer {
+            max-height: 180px;
+        }
+
+        @media (max-width: 767.98px) {
+
+            .vretail-faq__accordion {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .vretail-faq__item {
+                padding: 0 18px;
+
+                border: 1px solid #ecebf4;
+                border-radius: 12px;
+
+                overflow: hidden;
+            }
+
+            .vretail-faq__question {
+                padding: 18px 0;
+            }
+
+            .vretail-faq__answer p {
+                padding-bottom: 18px;
+            }
+
+        }
+
+
+
+
+
+
+        /* Hidden by default on mobile */
+        .vretail-industries__desktop-swiper,
+        .vretail-industries__desktop-pagination {
+            display: none;
+        }
+
+
+        @media (min-width: 768px) {
+
+            /*
+     * Main structure contains only cards 1–12 on desktop.
+     * Your existing grid styling can remain unchanged.
+     */
+
+            .vretail-industries__desktop-swiper {
+                padding-top: 8px;
+                display: block;
+
+                width: 100%;
+
+                margin-top: 18px;
+
+                overflow: hidden;
+            }
+
+
+            /*
+     * Ensure cards inside the desktop Swiper
+     * are controlled by Swiper rather than grid CSS.
+     */
+            .vretail-industries__desktop-swiper .vretail-industries__card {
+                height: auto;
+            }
+
+
+            .vretail-industries__desktop-pagination {
+                display: flex;
+
+                align-items: center;
+                justify-content: center;
+
+                position: static;
+
+                margin-top: 22px;
+            }
+
+
+            .vretail-industries__desktop-pagination .swiper-pagination-bullet {
+                width: 7px;
+                height: 7px;
+
+                margin: 0 4px !important;
+
+                border-radius: 20px;
+
+                background: var(--secondary-bg);
+                opacity: 1;
+
+                transition:
+                    width 0.3s ease,
+                    background-color 0.3s ease;
+            }
+
+
+            .vretail-industries__desktop-pagination .swiper-pagination-bullet-active {
+                width: 22px;
+
+                background: var(--primary-color);
+            }
+
+
+            /*
+     * Mobile pagination should not appear on desktop.
+     */
+            .vretail-industries__pagination {
+                display: none;
+            }
+
+        }
+
+
+        @media (max-width: 767.98px) {
+
+            .vretail-industries__desktop-swiper,
+            .vretail-industries__desktop-pagination {
+                display: none;
+            }
+
+
+            .vretail-industries__pagination {
+                display: flex;
+
+                align-items: center;
+                justify-content: center;
+
+                position: static;
+
+                margin-top: 22px;
+            }
+
+        }
+
+        /* fixes */
+        @media (min-width: 992px) and (max-width: 1050px) {
+            .vretail-hero__float-card-checkout {
+                top: clamp(40px, 5vw, 50px);
+                right: clamp(-40px, -2.5vw, -20px);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 992px) {
+            .vretail-pill {
+                gap: 3px !important;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 992px) {
+            .vretail-promo-tag {
+                font-size: 8px;
+            }
+        }
+    
+/* Koda content adaptations within the original retail layout. */
+.koda-freight-page main{overflow-x:clip}.koda-freight-page .vretail-hero__btn,.koda-freight-page .vretail-faq__btn{background:#fdb847;color:#060173;border-color:#fdb847}
+.koda-freight-page .vretail-hero__btn:hover,.koda-freight-page .vretail-faq__btn:hover{background:#060173;color:white}
+.koda-freight-page .vretail-hero__float-value{font-size:18px}.koda-freight-note{font-size:12px;line-height:1.5;color:#646276;text-align:center;margin:24px 12px 0}
+.koda-freight-page .vretail-outcomes__number{font-size:clamp(25px,3vw,42px)}
+.koda-freight-page .vretail-integration__item img{object-fit:contain;width:28px;height:28px}
+.koda-freight-page .vretail-trust__brands img{object-fit:contain;max-height:70px;width:140px}
+.koda-freight-page .vretail-testimonials__video-image{object-fit:cover}
+.koda-freight-page #all-segments{scroll-margin-top:100px}
+@media(max-width:575px){.koda-freight-page .vretail-hero__actions{flex-wrap:wrap!important}.koda-freight-page .vretail-hero__btn{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.koda-freight-page *{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+.koda-freight-page .vretail-hero__title h1{display:block}

@@ -1,0 +1,46 @@
+/* Koda brand theme: one shared, final layer across the entire website. */
+:root{--koda-navy:#060173;--koda-gold:#fdb847;--koda-pale:#f6f5fd;--koda-border:#e6e4f4;--primary-color:#060173;--primary-dark:#060173;--primary-light:#57539b;--primary-bg:#dedcf2;--primary-bg-light:#f6f5fd;--section-bg:#f6f5fd;--shadow-blue:rgba(6,1,115,.12);--primary:#060173;--primary-soft:#dcdaf1;--bs-primary:#060173;--bs-primary-rgb:6,1,115;--shadow-cta:0 12px 30px -12px rgba(6,1,115,.23)}
+/* Keep pale surfaces and gradients light; strong colour is reserved for accents. */
+.hero-new-banner-main{background-image:radial-gradient(60% 60% at 78% 32%,rgba(6,1,115,.065) 0%,transparent 70%),radial-gradient(45% 50% at 12% 18%,rgba(6,1,115,.035) 0%,transparent 72%)}
+.hero-new-banner-main .blue-text{color:var(--koda-navy)}
+body .text-primary,body .text-primary-dark{color:var(--koda-navy)!important}
+body .bg-primary{background-color:var(--koda-navy)!important}
+/* Gold action buttons with navy text maintain strong readable contrast. */
+body a.btn:not(.btn-menu):not(.btn-link):not(.btn-close):not(.btn-outline-cstm-primary),body button.btn:not(.btn-menu):not(.btn-link):not(.btn-close):not(.btn-outline-cstm-primary),body .btn-brand,body .about-us-btn-primary,body .about-us-btn-white,body .about-us-career-btn,body .vasy-contactus-cta-btn-primary,body .vasy-contactus-submit-btn,body .vretail-demo-popup__submit,body .fy-section-main .fy-center .cta,body .vina-cta-button,body .btn-demo{background:var(--koda-gold)!important;background-image:none!important;border-color:var(--koda-gold)!important;color:var(--koda-navy)!important;box-shadow:none}
+body a.btn:not(.btn-menu):not(.btn-link):not(.btn-close):not(.btn-outline-cstm-primary):hover,body button.btn:not(.btn-menu):not(.btn-link):not(.btn-close):not(.btn-outline-cstm-primary):hover,body .btn-brand:hover,body .about-us-btn-primary:hover,body .about-us-btn-white:hover,body .about-us-career-btn:hover,body .vasy-contactus-cta-btn-primary:hover,body .vasy-contactus-submit-btn:hover,body .vretail-demo-popup__submit:hover,body .fy-section-main .fy-center .cta:hover,body .vina-cta-button:hover,body .btn-demo:hover{background:#ffc866!important;border-color:#ffc866!important;color:var(--koda-navy)!important;box-shadow:0 8px 22px rgba(6,1,115,.09)}
+body .btn-outline-cstm-primary,body .about-us-btn-outline{background:transparent!important;border-color:var(--koda-navy)!important;color:var(--koda-navy)!important}
+body .btn-outline-cstm-primary:hover,body .about-us-btn-outline:hover{background:#efedf9!important;color:var(--koda-navy)!important}
+body .about-us-btn-ghost-white,body .vasy-contactus-cta-btn-outlined{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.7)!important}
+body .hero-new-banner-main .hero-wrapper .btn-primary:after,body .hero-new-banner-main .hero-wrapper .btn-primary:hover:after,body .btn-brand.btn-arrow:after{filter:brightness(0) saturate(100%)!important}
+body .vasy-contactus-submit-btn img,body .vasy-contactus-cta-btn-primary img{filter:brightness(0) saturate(100%)}
+body .btn .text-white,body .about-us-btn-primary svg{color:var(--koda-navy)!important}
+body .vasy-contactus-chat-send-btn{background:var(--koda-gold)!important;color:var(--koda-navy)!important}
+body .vasy-contactus-chat-send-btn img{filter:brightness(0) saturate(100%)}
+body .swiper-pagination-bullet-active{background:var(--koda-navy)}
+body .form-control:focus{border-color:#6a66ad;box-shadow:0 0 0 .2rem rgba(6,1,115,.1)}
+:focus-visible{outline-color:var(--koda-navy)}
+/* Footer: remove source template's negative offset intended for a floating phone mockup. */
+#footer .mobile-app{margin-top:0!important;transform:none!important;position:static!important}
+#footer .footer-shape{position:relative}
+#footer .koda-footer-action{position:static;transform:none;margin:0;padding:12px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:20px;height:auto;min-width:0;text-align:center}
+#footer .koda-footer-action>img{display:block;width:78px!important;height:62px!important;max-width:100%!important;object-fit:contain;margin:0!important;position:static!important;transform:none!important}
+#footer .koda-footer-action .btn{width:100%;max-width:240px;white-space:normal;padding:12px 18px;line-height:1.5;border-radius:5px}
+#footer .koda-footer-action p{font-size:13px;line-height:1.6;margin:0;color:#595967}
+#footer .footer-bottom{color:#464653!important}
+#footer .footer-shape a:not(.btn){color:var(--koda-navy)}
+#footer .footer-shape a:not(.btn):hover{text-decoration:underline}
+/* Client marks: frame the logo, not the whole image box. No distortion or cropping. */
+#merchants .splide{height:128px}
+#merchants .splide__list{align-items:center}
+#merchants .splide__slide.client-logo{height:94px!important;min-height:94px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #eeedf3;border-radius:9px;padding:15px 13px;box-shadow:0 3px 5px rgba(6,1,115,.06);overflow:hidden}
+#merchants .splide__slide.client-logo img{display:block;width:100%!important;height:100%!important;max-width:122px!important;max-height:60px!important;object-fit:contain!important;object-position:center;padding:0!important;margin:0!important;transform:none!important;border-radius:0!important;box-shadow:none!important;filter:none}
+.logo-ticker-section .logo-item img{width:auto!important;height:auto!important;max-width:min(142px,100%)!important;max-height:52px!important;object-fit:contain!important;object-position:center;padding:0!important;transform:none!important}
+.vretail-trust img[src*="koda-clients/"]{width:100%!important;height:68px!important;max-width:150px;object-fit:contain!important;object-position:center;padding:8px!important;transform:none!important}
+@media(max-width:991px){#footer .koda-footer-action{padding:26px 0 8px;gap:15px}#merchants .splide__slide.client-logo{padding:14px 12px}}
+@media(max-width:575px){#footer .koda-footer-action{border-top:1px solid var(--koda-border);margin-top:24px;padding-top:24px}#footer .koda-footer-action>img{width:66px!important;height:52px!important}#merchants .splide{height:112px}#merchants .splide__slide.client-logo{height:82px!important;min-height:82px;padding:12px 10px}#merchants .splide__slide.client-logo img{max-height:52px!important;max-width:100%!important}.logo-ticker-section .logo-item img{max-width:min(120px,100%)!important;max-height:46px!important}}
+/* The original hero also uses OKLCH variables: retint them without altering motion. */
+.hero-system-slide{--sys-primary:#060173;--sys-primary-glow:#c6c3e9;--sys-primary-deep:#060173;--sys-primary-foreground:#faf9ff}
+.hero-system-slide .sys-dot{background:var(--koda-gold)}
+.hero-system-slide .net stop{stop-color:var(--koda-navy)}
+.hero-system-slide .net circle{fill:var(--koda-gold)}
+.hero-new-banner-main .swiper-pagination-bullet-active{background:var(--koda-navy)!important}

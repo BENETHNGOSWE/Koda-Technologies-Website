@@ -1,0 +1,393 @@
+.koda-freight-why {
+            padding: clamp(50px, 7vw, 90px) 0;
+            background: #ffffff;
+        }
+
+        .koda-freight-why__header {
+            max-width: 760px;
+            margin: 0 auto clamp(32px, 4vw, 44px);
+            text-align: center;
+        }
+
+        .koda-freight-why__eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+
+            color: var(--primary-color);
+        }
+
+        .koda-freight-why__title {
+            margin: 0;
+
+            font-size: clamp(32px, 4vw, 46px);
+            font-weight: 700;
+            line-height: 1.15;
+
+            color: var(--secondary-color);
+        }
+
+        .koda-freight-why__grid {
+            max-width: 920px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .koda-freight-why__card {
+            min-height: 180px;
+            padding: 26px;
+
+            border: 1px solid rgba(6,1,115,0.076);
+            border-radius: 14px;
+
+            background: #fbfafd;
+
+            transition: all 0.35s ease;
+        }
+
+        .koda-freight-why__card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(6,1,115,0.076);
+        }
+
+        .koda-freight-why__icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+            background: rgba(6,1,115,0.0468);
+            color: var(--primary-color);
+        }
+
+        .koda-freight-why__icon i {
+            font-size: 19px;
+            line-height: 1;
+        }
+
+        .koda-freight-why__card h3 {
+            margin: 0 0 10px;
+
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.35;
+
+            color: #2f3033;
+        }
+
+        .koda-freight-why__card p {
+            margin: 0;
+
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.55;
+
+            color: #060173;
+        }
+
+        .koda-freight-why__more-wrap {
+            display: none;
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .koda-freight-why__more-btn {
+            padding: 0;
+
+            border: 0;
+
+            background: none;
+
+            color: var(--primary-color);
+
+            font-size: 16px;
+            font-weight: 600;
+
+            text-decoration: underline;
+
+            cursor: pointer;
+
+            transition: .25s ease;
+        }
+
+        @media (max-width: 991.98px) {
+
+            .koda-freight-why__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .koda-freight-why__card:nth-child(n + 5) {
+                display: none;
+            }
+
+            .koda-freight-why.is-expanded .koda-freight-why__card {
+                display: block;
+            }
+
+            .koda-freight-why__more-wrap {
+                display: block;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+
+            .koda-freight-why__grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .koda-freight-why__card {
+                min-height: auto;
+                padding: 22px;
+            }
+
+            .koda-freight-why__card:nth-child(n + 4) {
+                display: none;
+            }
+
+            .koda-freight-why.is-expanded .koda-freight-why__card {
+                display: block;
+            }
+        }
+
+        /* why vasy section ends */
+
+
+        /* testimonials section starts  */
+
+        .koda-freight-faq {
+            padding: clamp(45px, 6vw, 80px) 0;
+            background: #fff;
+        }
+
+        .koda-freight-faq__grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: clamp(40px, 7vw, 110px);
+            align-items: flex-start;
+        }
+
+        .koda-freight-faq__header {
+            max-width: 380px;
+        }
+
+        .koda-freight-faq__eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: 0.04em;
+
+            color: #060173;
+            text-transform: uppercase;
+        }
+
+        .koda-freight-faq__title {
+            margin: 0 0 14px;
+
+            font-size: clamp(34px, 4vw, 48px);
+            font-weight: 800;
+            line-height: 1.1;
+
+            color: #333;
+        }
+
+        .koda-freight-faq__description {
+            margin: 0 0 24px;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.6;
+
+            color: #8a8f98;
+        }
+
+        .koda-freight-faq__btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-width: 170px;
+            min-height: 54px;
+            padding: 14px 28px;
+
+            border-radius: 5px;
+            background: #060173;
+
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1;
+
+            color: #fff;
+            text-decoration: none;
+
+            transition: all 0.25s ease;
+        }
+
+        .koda-freight-faq__btn:hover {
+            background: var(--primary-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 767.98px) {
+            .koda-freight-faq__grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .koda-freight-faq__header {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .koda-freight-faq__btn {
+                min-width: 150px;
+                min-height: 48px;
+                font-size: 16px;
+            }
+        }
+
+        .koda-freight-faq__accordion {
+            width: 100%;
+        }
+
+        .koda-freight-faq__item {
+            border-bottom: 1px solid #ecebf4;
+        }
+
+        .koda-freight-faq__question {
+            width: 100%;
+            padding: 20px 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+
+            text-align: left;
+        }
+
+        .koda-freight-faq__question span {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+
+            color: #333;
+        }
+
+        .koda-freight-faq__icon {
+            flex: 0 0 auto;
+
+            width: 18px;
+            height: 18px;
+            padding: 3px;
+
+            border: 1px solid var(--secondary-dark);
+            border-radius: 50%;
+
+            color: var(--secondary-dark);
+
+            transition:
+                transform 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .koda-freight-faq__item.is-open .koda-freight-faq__icon {
+            transform: rotate(45deg);
+
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .koda-freight-faq__item.is-open .koda-freight-faq__icon {
+            transform: rotate(45deg);
+        }
+
+        .koda-freight-faq__answer {
+            max-height: 0;
+            overflow: hidden;
+
+            transition: max-height 0.3s ease;
+        }
+
+        .koda-freight-faq__answer p {
+            max-width: 620px;
+            margin: 0;
+            padding: 0 0 22px;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.65;
+
+            color: #8a8f98;
+        }
+
+        .koda-freight-faq__item.is-open .koda-freight-faq__answer {
+            max-height: 180px;
+        }
+
+        @media (max-width: 767.98px) {
+
+            .koda-freight-faq__accordion {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .koda-freight-faq__item {
+                padding: 0 18px;
+
+                border: 1px solid #ecebf4;
+                border-radius: 12px;
+
+                overflow: hidden;
+            }
+
+            .koda-freight-faq__question {
+                padding: 18px 0;
+            }
+
+            .koda-freight-faq__answer p {
+                padding-bottom: 18px;
+            }
+
+        }
+
+
+
+
+
+
+        
+.koda-freight-faq__btn{background:#fdb847;color:#060173}.koda-freight-faq__btn:hover{background:#060173;color:white}
+.koda-freight-faq__title{font-size:clamp(30px,3vw,44px)}
+.koda-freight-faq__question:focus-visible,.koda-freight-why__more-btn:focus-visible{outline:3px solid #fdb847;outline-offset:4px}
+.koda-freight-why__card p,.koda-freight-faq__answer p{color:#6b7280}
+#why-koda,#faqs{scroll-margin-top:100px}
+@media(prefers-reduced-motion:reduce){.koda-freight-faq *{transition:none!important}}
+
+/* Simplified freight hero: retain original content and side icons, with breathing room below. */
+#kodafreight-hero{padding-bottom:100px!important}
+@media(max-width:767.98px){#kodafreight-hero{padding-bottom:75px!important}}
+
+/* Additional breathing room directly below the hero action buttons. */
+#kodafreight-hero .col-lg-6 > .d-flex{margin-bottom:40px}

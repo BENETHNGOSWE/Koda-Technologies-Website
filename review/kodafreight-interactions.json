@@ -1,0 +1,16 @@
+{
+  "eleven_sections": true,
+  "chart": true,
+  "faq": true,
+  "process_carousel": true,
+  "contact_prefill": true,
+  "collapsed_features": true,
+  "expanded_features": true,
+  "features_collapse_again": true,
+  "why_koda_expand": true,
+  "offer_mobile_swiper": true,
+  "workflow_mobile_swiper": true,
+  "systems_mobile_swiper": true,
+  "responsive_workflow_cards": true,
+  "errors": []
+}
