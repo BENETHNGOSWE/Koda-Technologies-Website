@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kodatechnologies.co.tz/sitemap.xml
